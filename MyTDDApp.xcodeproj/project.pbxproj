@@ -12,6 +12,11 @@
 		CC0DD0E3260C059800886727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0DD0B8260C059800886727 /* Assets.xcassets */; };
 		CC0DD0F9260C069500886727 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD0F8260C069500886727 /* Product.swift */; };
 		CC0DD147260C09ED00886727 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD146260C09ED00886727 /* ProductTests.swift */; };
+		CC0DD15F260C0D9A00886727 /* ChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD15E260C0D9A00886727 /* ChartTests.swift */; };
+		CC0DD166260C0E2F00886727 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD165260C0E2F00886727 /* Chart.swift */; };
+		CCEB2B9E260C0FE5000F0A6A /* AddProductToChartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2B9D260C0FE5000F0A6A /* AddProductToChartUseCaseTests.swift */; };
+		CCEB2BB5260C11ED000F0A6A /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BB4260C11ED000F0A6A /* ChartService.swift */; };
+		CCEB2BB9260C1262000F0A6A /* ChartServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BB8260C1201000F0A6A /* ChartServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,12 @@
 		CC0DD144260C09ED00886727 /* MyTDDAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTDDAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0DD146260C09ED00886727 /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		CC0DD148260C09ED00886727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0DD15E260C0D9A00886727 /* ChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTests.swift; sourceTree = "<group>"; };
+		CC0DD165260C0E2F00886727 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		CCEB2B9D260C0FE5000F0A6A /* AddProductToChartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCaseTests.swift; sourceTree = "<group>"; };
+		CCEB2BA8260C1167000F0A6A /* AddProductToChartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCase.swift; sourceTree = "<group>"; };
+		CCEB2BB4260C11ED000F0A6A /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
+		CCEB2BB8260C1201000F0A6A /* ChartServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +78,9 @@
 		CC0DD0B5260C059600886727 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CCEB2BB2260C11AF000F0A6A /* Service */,
 				CC0DD0B6260C059600886727 /* MyTDDAppApp.swift */,
+				CCEB2BA7260C1167000F0A6A /* UseCase */,
 				CC0DD0F7260C068400886727 /* Model */,
 				CC0DD0B7260C059600886727 /* ContentView.swift */,
 				CC0DD0B8260C059800886727 /* Assets.xcassets */,
@@ -96,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0DD0F8260C069500886727 /* Product.swift */,
+				CC0DD165260C0E2F00886727 /* Chart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,10 +117,53 @@
 		CC0DD145260C09ED00886727 /* MyTDDAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC0DD146260C09ED00886727 /* ProductTests.swift */,
+				CCEB2BB1260C119E000F0A6A /* Service */,
+				CCEB2B9C260C0F94000F0A6A /* UseCase */,
+				CC0DD162260C0D9F00886727 /* Model */,
 				CC0DD148260C09ED00886727 /* Info.plist */,
 			);
 			path = MyTDDAppTests;
+			sourceTree = "<group>";
+		};
+		CC0DD162260C0D9F00886727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC0DD146260C09ED00886727 /* ProductTests.swift */,
+				CC0DD15E260C0D9A00886727 /* ChartTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCEB2B9C260C0F94000F0A6A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB2B9D260C0FE5000F0A6A /* AddProductToChartUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		CCEB2BA7260C1167000F0A6A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB2BA8260C1167000F0A6A /* AddProductToChartUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		CCEB2BB1260C119E000F0A6A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB2BB8260C1201000F0A6A /* ChartServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CCEB2BB2260C11AF000F0A6A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CCEB2BB4260C11ED000F0A6A /* ChartService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEB2BB5260C11ED000F0A6A /* ChartService.swift in Sources */,
+				CC0DD166260C0E2F00886727 /* Chart.swift in Sources */,
 				CC0DD0E1260C059800886727 /* ContentView.swift in Sources */,
 				CC0DD0DF260C059800886727 /* MyTDDAppApp.swift in Sources */,
 				CC0DD0F9260C069500886727 /* Product.swift in Sources */,
@@ -217,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEB2BB9260C1262000F0A6A /* ChartServiceTests.swift in Sources */,
+				CC0DD15F260C0D9A00886727 /* ChartTests.swift in Sources */,
+				CCEB2B9E260C0FE5000F0A6A /* AddProductToChartUseCaseTests.swift in Sources */,
 				CC0DD147260C09ED00886727 /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
