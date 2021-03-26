@@ -10,7 +10,7 @@ import XCTest
 
 class RemoveProductToChartUseCaseTests: XCTestCase {
     func testRemoveTwoProductsToChartOneByOne() throws {
-        let products = [Product(name: "Name", description: "Desc", price: 10.0), Product(name: "Name", description: "Desc", price: 10.0)]
+        let products = [Product(id: UUID().uuidString, name: "Name", description: "Desc", price: 10.0), Product(id: UUID().uuidString, name: "Name", description: "Desc", price: 10.0)]
         let useCase = RemoveProductToChartUseCase(service: ChartService(Chart(products: products)))
 
         _ = useCase.execute(products[0])
@@ -20,7 +20,7 @@ class RemoveProductToChartUseCaseTests: XCTestCase {
     }
 
     func testRemoveTwoProductsToChartInaRow() throws {
-        let products = [Product(name: "Name", description: "Desc", price: 10.0), Product(name: "Name", description: "Desc", price: 10.0)]
+        let products = [Product(id: UUID().uuidString, name: "Name", description: "Desc", price: 10.0), Product(id: UUID().uuidString, name: "Name", description: "Desc", price: 10.0)]
         let useCase = RemoveProductToChartUseCase(service: ChartService(Chart(products: products)))
 
         XCTAssertEqual(useCase.execute(products).products.count, 0)

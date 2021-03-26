@@ -15,7 +15,7 @@ protocol ProductProtocol {
 }
 
 struct Product: ProductProtocol {
-    let id: String = UUID().uuidString
+    let id: String
     let name: String
     let description: String
     let price: Double

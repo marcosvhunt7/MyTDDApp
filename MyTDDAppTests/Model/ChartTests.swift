@@ -17,7 +17,7 @@ class ChartTests: XCTestCase {
     }
     
     func testChartWithOndeProduct() {
-        let chart = Chart(products: [Product(name: "Name", description: "Desc", price: 10.0)])
+        let chart = Chart(products: [Product(id: UUID().uuidString, name: "Name", description: "Desc", price: 10.0)])
         
         XCTAssertEqual(chart.products.count, 1)
     }
