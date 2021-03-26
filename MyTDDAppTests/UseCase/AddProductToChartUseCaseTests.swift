@@ -9,8 +9,19 @@ import XCTest
 @testable import MyTDDApp
 
 class AddProductToChartUseCaseTests: XCTestCase {
+    func testAddTwoProductsToChartOneByOne() throws {
+        let useCase = AddProductToChartUseCase(service: ChartService(Chart(products: [])))
 
-    func testAddOneProductToChart() throws {
-        
+        _ = useCase.execute(Product(name: "Name", description: "Desc", price: 10.0))
+        let chart = useCase.execute(Product(name: "Name", description: "Desc", price: 10.0))
+
+        XCTAssertEqual(chart.products.count, 2)
+    }
+
+    func testAddTwoProductsToChartInaRow() throws {
+        let products = [Product(name: "Name", description: "Desc", price: 10.0), Product(name: "Name", description: "Desc", price: 10.0)]
+        let useCase = AddProductToChartUseCase(service: ChartService(Chart(products: [])))
+
+        XCTAssertEqual(useCase.execute(products).products.count, 2)
     }
 }
