@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC0DD0DF260C059800886727 /* MyTDDAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD0B6260C059600886727 /* MyTDDAppApp.swift */; };
-		CC0DD0E1260C059800886727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD0B7260C059600886727 /* ContentView.swift */; };
+		CC0DD0E1260C059800886727 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD0B7260C059600886727 /* HomeView.swift */; };
 		CC0DD0E3260C059800886727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0DD0B8260C059800886727 /* Assets.xcassets */; };
 		CC0DD0F9260C069500886727 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD0F8260C069500886727 /* Product.swift */; };
 		CC0DD147260C09ED00886727 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD146260C09ED00886727 /* ProductTests.swift */; };
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		CC0DD0B6260C059600886727 /* MyTDDAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTDDAppApp.swift; sourceTree = "<group>"; };
-		CC0DD0B7260C059600886727 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC0DD0B7260C059600886727 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CC0DD0B8260C059800886727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC0DD0BD260C059800886727 /* MyTDDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTDDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0DD0C0260C059800886727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,11 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				CCEB2BB2260C11AF000F0A6A /* Service */,
-				CC0DD0B6260C059600886727 /* MyTDDAppApp.swift */,
 				CCEB2BA7260C1167000F0A6A /* UseCase */,
 				CC0DD0F7260C068400886727 /* Model */,
-				CC0DD0B7260C059600886727 /* ContentView.swift */,
-				CC0DD0B8260C059800886727 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -105,6 +102,9 @@
 		CC0DD0BF260C059800886727 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CC0DD0B6260C059600886727 /* MyTDDAppApp.swift */,
+				CC87316A261284B800FAEA05 /* Home */,
+				CC0DD0B8260C059800886727 /* Assets.xcassets */,
 				CC0DD0C0260C059800886727 /* Info.plist */,
 			);
 			path = iOS;
@@ -137,6 +137,14 @@
 				CC0DD15E260C0D9A00886727 /* ChartTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CC87316A261284B800FAEA05 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CC0DD0B7260C059600886727 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		CCEB2B9C260C0F94000F0A6A /* UseCase */ = {
@@ -273,7 +281,7 @@
 			files = (
 				CCEB2BB5260C11ED000F0A6A /* ChartService.swift in Sources */,
 				CC0DD166260C0E2F00886727 /* Chart.swift in Sources */,
-				CC0DD0E1260C059800886727 /* ContentView.swift in Sources */,
+				CC0DD0E1260C059800886727 /* HomeView.swift in Sources */,
 				CC7E5A32260E9A4200E81389 /* AddProductToChartUseCase.swift in Sources */,
 				CC0DD0DF260C059800886727 /* MyTDDAppApp.swift in Sources */,
 				CC7E5A45260EA0C700E81389 /* RemoveProductToChartUseCase.swift in Sources */,

@@ -8,14 +8,14 @@
 import Foundation
 
 protocol ProductProtocol {
-    var id: String { get }
+    var id: UUID { get }
     var name: String { get }
     var description: String { get }
     var price: Double { get }
 }
 
 struct Product: ProductProtocol {
-    let id: String
+    let id: UUID
     let name: String
     let description: String
     let price: Double
