@@ -18,6 +18,8 @@
 		CC7E5A36260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E5A35260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift */; };
 		CC7E5A41260EA0B200E81389 /* RemoveProductToChartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2B9D260C0FE5000F0A6A /* RemoveProductToChartUseCaseTests.swift */; };
 		CC7E5A45260EA0C700E81389 /* RemoveProductToChartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E5A44260EA0C700E81389 /* RemoveProductToChartUseCase.swift */; };
+		CCEAA0B4261291DC00C48D1C /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA0B3261291DC00C48D1C /* NetworkTests.swift */; };
+		CCEAA0C8261297F200C48D1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA0C7261297F200C48D1C /* NetworkManager.swift */; };
 		CCEB2BB5260C11ED000F0A6A /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BB4260C11ED000F0A6A /* ChartService.swift */; };
 		CCEB2BB9260C1262000F0A6A /* ChartServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BB8260C1201000F0A6A /* ChartServiceTests.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		CC0DD165260C0E2F00886727 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		CC7E5A35260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCaseTests.swift; sourceTree = "<group>"; };
 		CC7E5A44260EA0C700E81389 /* RemoveProductToChartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductToChartUseCase.swift; sourceTree = "<group>"; };
+		CCEAA0B3261291DC00C48D1C /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		CCEAA0C7261297F200C48D1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CCEB2B9D260C0FE5000F0A6A /* RemoveProductToChartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductToChartUseCaseTests.swift; sourceTree = "<group>"; };
 		CCEB2BA8260C1167000F0A6A /* AddProductToChartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCase.swift; sourceTree = "<group>"; };
 		CCEB2BB4260C11ED000F0A6A /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		CC0DD0B5260C059600886727 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CCEAA0C6261297DF00C48D1C /* Network */,
 				CCEB2BB2260C11AF000F0A6A /* Service */,
 				CCEB2BA7260C1167000F0A6A /* UseCase */,
 				CC0DD0F7260C068400886727 /* Model */,
@@ -122,6 +127,7 @@
 		CC0DD145260C09ED00886727 /* MyTDDAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				CCEAA0B2261291BF00C48D1C /* Network */,
 				CCEB2BB1260C119E000F0A6A /* Service */,
 				CCEB2B9C260C0F94000F0A6A /* UseCase */,
 				CC0DD162260C0D9F00886727 /* Model */,
@@ -145,6 +151,22 @@
 				CC0DD0B7260C059600886727 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		CCEAA0B2261291BF00C48D1C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CCEAA0B3261291DC00C48D1C /* NetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CCEAA0C6261297DF00C48D1C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CCEAA0C7261297F200C48D1C /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CCEB2B9C260C0F94000F0A6A /* UseCase */ = {
@@ -293,8 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEAA0B4261291DC00C48D1C /* NetworkTests.swift in Sources */,
 				CCEB2BB9260C1262000F0A6A /* ChartServiceTests.swift in Sources */,
 				CC0DD15F260C0D9A00886727 /* ChartTests.swift in Sources */,
+				CCEAA0C8261297F200C48D1C /* NetworkManager.swift in Sources */,
 				CC0DD147260C09ED00886727 /* ProductTests.swift in Sources */,
 				CC7E5A36260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift in Sources */,
 				CC7E5A41260EA0B200E81389 /* RemoveProductToChartUseCaseTests.swift in Sources */,
