@@ -14,7 +14,7 @@ protocol ProductProtocol {
     var price: Double { get }
 }
 
-struct Product: ProductProtocol {
+struct Product: ProductProtocol, Codable {
     let id: UUID
     let name: String
     let description: String
