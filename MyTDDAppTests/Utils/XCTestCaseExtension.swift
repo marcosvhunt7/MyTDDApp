@@ -77,6 +77,7 @@ extension XCTestCase {
                         break
                 }
 
+                expectation.fulfill()
             },
             receiveValue: { value in
                 result = .success(value)

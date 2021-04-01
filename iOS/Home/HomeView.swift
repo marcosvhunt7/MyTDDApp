@@ -7,33 +7,10 @@
 
 import SwiftUI
 
-struct ProductCell: View {
-    let product: Product
-
-    var body: some View {
-        Text(product.name)
-            .padding()
-    }
-}
-
 struct HomeView: View {
-    let products: [Product] = []
 
     var body: some View {
-        NavigationView(content: {
-            VStack(alignment: .center, spacing: nil, content: {
-                ForEach(products, id: \.id) { product in
-                    ProductCell(product: product)
-                }
-            })
-            .navigationBarTitle("Products", displayMode: .automatic)
-            .navigationBarItems(trailing: Button(action: {
-                // TODO: Chart
-            }, label: {
-                Text("Chart")
-            }))
-        })
-
+        Text("Home")
     }
 }
 

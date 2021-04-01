@@ -15,12 +15,13 @@
 		CC0DD15F260C0D9A00886727 /* ChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD15E260C0D9A00886727 /* ChartTests.swift */; };
 		CC0DD166260C0E2F00886727 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DD165260C0E2F00886727 /* Chart.swift */; };
 		CC302A542613B60700070093 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC302A532613B60700070093 /* APIError.swift */; };
+		CC72B4882613FA5800FF86B8 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B4872613FA5800FF86B8 /* MockURLSession.swift */; };
 		CC7E5A32260E9A4200E81389 /* AddProductToChartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BA8260C1167000F0A6A /* AddProductToChartUseCase.swift */; };
 		CC7E5A36260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E5A35260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift */; };
 		CC7E5A41260EA0B200E81389 /* RemoveProductToChartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2B9D260C0FE5000F0A6A /* RemoveProductToChartUseCaseTests.swift */; };
 		CC7E5A45260EA0C700E81389 /* RemoveProductToChartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E5A44260EA0C700E81389 /* RemoveProductToChartUseCase.swift */; };
+		CC980D8926154FC400EC4F19 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC980D8826154FC400EC4F19 /* MockAPI.swift */; };
 		CCEAA0B4261291DC00C48D1C /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA0B3261291DC00C48D1C /* APITests.swift */; };
-		CCEAA0F22613592E00C48D1C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA0F12613592E00C48D1C /* MockURLProtocol.swift */; };
 		CCEAA11B26136BB800C48D1C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA0C7261297F200C48D1C /* API.swift */; };
 		CCEAA1202613850D00C48D1C /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEAA11F2613850D00C48D1C /* XCTestCaseExtension.swift */; };
 		CCEB2BB5260C11ED000F0A6A /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB2BB4260C11ED000F0A6A /* ChartService.swift */; };
@@ -50,11 +51,12 @@
 		CC0DD15E260C0D9A00886727 /* ChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTests.swift; sourceTree = "<group>"; };
 		CC0DD165260C0E2F00886727 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		CC302A532613B60700070093 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CC72B4872613FA5800FF86B8 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		CC7E5A35260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCaseTests.swift; sourceTree = "<group>"; };
 		CC7E5A44260EA0C700E81389 /* RemoveProductToChartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductToChartUseCase.swift; sourceTree = "<group>"; };
+		CC980D8826154FC400EC4F19 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		CCEAA0B3261291DC00C48D1C /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		CCEAA0C7261297F200C48D1C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		CCEAA0F12613592E00C48D1C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		CCEAA11F2613850D00C48D1C /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		CCEB2B9D260C0FE5000F0A6A /* RemoveProductToChartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductToChartUseCaseTests.swift; sourceTree = "<group>"; };
 		CCEB2BA8260C1167000F0A6A /* AddProductToChartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToChartUseCase.swift; sourceTree = "<group>"; };
@@ -171,7 +173,7 @@
 		CCEAA0B2261291BF00C48D1C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CCEAA0F02613591900C48D1C /* Utils */,
+				CCEAA0F02613591900C48D1C /* Mocks */,
 				CCEAA0B3261291DC00C48D1C /* APITests.swift */,
 			);
 			path = Network;
@@ -180,26 +182,19 @@
 		CCEAA0C6261297DF00C48D1C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CCEAA1092613690E00C48D1C /* Extension */,
 				CCEAA0C7261297F200C48D1C /* API.swift */,
 				CC302A522613B5F700070093 /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		CCEAA0F02613591900C48D1C /* Utils */ = {
+		CCEAA0F02613591900C48D1C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				CCEAA0F12613592E00C48D1C /* MockURLProtocol.swift */,
+				CC72B4872613FA5800FF86B8 /* MockURLSession.swift */,
+				CC980D8826154FC400EC4F19 /* MockAPI.swift */,
 			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		CCEAA1092613690E00C48D1C /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		CCEAA11E261384F900C48D1C /* Utils */ = {
@@ -362,9 +357,10 @@
 				CCEB2BB9260C1262000F0A6A /* ChartServiceTests.swift in Sources */,
 				CC0DD15F260C0D9A00886727 /* ChartTests.swift in Sources */,
 				CC0DD147260C09ED00886727 /* ProductTests.swift in Sources */,
+				CC980D8926154FC400EC4F19 /* MockAPI.swift in Sources */,
 				CC7E5A36260E9FFD00E81389 /* AddProductToChartUseCaseTests.swift in Sources */,
 				CC7E5A41260EA0B200E81389 /* RemoveProductToChartUseCaseTests.swift in Sources */,
-				CCEAA0F22613592E00C48D1C /* MockURLProtocol.swift in Sources */,
+				CC72B4882613FA5800FF86B8 /* MockURLSession.swift in Sources */,
 				CCEAA1202613850D00C48D1C /* XCTestCaseExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

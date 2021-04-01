@@ -9,13 +9,10 @@ import Foundation
 
 
 public enum APIError: Int, Error, Equatable {
-    case badRequest = 400
-    case badResponse
+    case badRequest
     case forbidden
     case internalServerError
-    case internetNotReachable
     case methodNotAllowed
-//    case serverError(statusCode: Int, errorCodes: [String], messages: [String])
     case requestTimeout
     case resourceNotFound
     case unauthorized

@@ -8,10 +8,17 @@
 import Foundation
 import Combine
 
+protocol APIProvider {
+    typealias APIResponse = URLSession.DataTaskPublisher.Output
+    typealias ErasedDataTaskPublisher = AnyPublisher<APIResponse, URLError>
+
+    func erasedDataTaskPublisher(for request: URLRequest) -> ErasedDataTaskPublisher
+}
+
 protocol APIProtocol {
     associatedtype T: Codable
 
-    var session: URLSession { get }
+    var session: APIProvider { get }
     var urlRequest: URLRequest { get }
     func load() -> AnyPublisher<T, Error>
 }
@@ -21,7 +28,7 @@ extension APIProtocol {
     @discardableResult
     func load() -> AnyPublisher<T, Error> {
         let task = session
-            .dataTaskPublisher(for: urlRequest)
+            .erasedDataTaskPublisher(for: urlRequest)
             .tryMap() { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse else {
                     throw URLError(.badServerResponse)
