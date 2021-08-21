@@ -7,7 +7,15 @@
 
 import Foundation
 
-public struct Product {
+protocol ProductProtocol {
+    var id: UUID { get }
+    var name: String { get }
+    var description: String { get }
+    var price: Double { get }
+}
+
+struct Product: ProductProtocol, Codable {
+    let id: UUID
     let name: String
     let description: String
     let price: Double
